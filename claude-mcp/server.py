@@ -28,6 +28,21 @@ def list_notes() -> list[str]:
         "Note 2: This server will be used later by a Claude agent.",
         "Note 3: Replace this with your real data source."
     ]
+
+@mcp.tool
+def analyze_task(description: str, priority: int) -> dict:
+    summary = description.strip().capitalize()
+    priority_level = (
+        "high" if priority >= 7
+        else "medium" if priority >= 4
+        else "low"
+    )
+    return {
+        "original": description,
+        "summary": summary,
+        "priority_level": priority_level
+    }
+
 # 4. A parameterized RESOURCE using a path template
 @mcp.resource("notes://{note_id}")
 def get_note(note_id: str) -> str:
