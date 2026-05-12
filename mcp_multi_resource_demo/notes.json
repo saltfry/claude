@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "note": "MCP resources are read-only"
+  },
+  {
+    "id": 2,
+    "note": "Inspector auto-discovers resources"
+  },
+  {
+    "id": 3,
+    "note": "Multiple data sources, one interface"
+  }
+]
