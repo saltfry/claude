@@ -16,6 +16,7 @@ def get_doc(doc_id: str):
     return {
         "id": doc_id,
         "content": f"This is the content for document {doc_id}."
+        
     }
 
 # 3) Resource: inspector (shows available resources)
